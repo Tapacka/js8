@@ -1,5 +1,6 @@
 const rotator = Array.from(document.getElementsByClassName('rotator'));
-const span = Array.from(rotator[0].querySelectorAll('span'));
+rotator.forEach(element => {
+const span = Array.from(element.querySelectorAll('span'));
 let index = 0;
 let speed = 0;
 
@@ -21,3 +22,4 @@ setTimeout(function run() {
     }
     setTimeout(run, speed)
 }, speed)
+})
