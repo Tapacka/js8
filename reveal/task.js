@@ -11,10 +11,11 @@ function isVisible(elem) {
     return true
 }
 
-setInterval(() => {Array.from(div).forEach(element => {
-    if (isVisible(element) == true) {
-        element.className = 'reveal reveal_active';
-    } else {
-        element.className = 'reveal'
-    }
-})}, 300)
+window.addEventListener('scroll', function() {
+    Array.from(div).forEach(element => {
+        if (isVisible(element) == true) {
+            element.className = 'reveal reveal_active';
+        } else {
+            element.className = 'reveal'
+        }})
+})
